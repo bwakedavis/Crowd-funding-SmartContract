@@ -51,3 +51,102 @@ function loadFile(){
     //sends request
     xhr.send()
 }
+
+//WORKING WITH JSON
+
+document.getElementById('fetch-user').addEventListener('click',fetchUser)
+
+function fetchUser(){
+    let xhr = new XMLHttpRequest()
+
+    xhr.open('GET','user.json', true)
+
+    xhr.onload = function(){
+        if(this.status == 200){
+            // console.log(this.responseText)
+            let user = JSON.parse(this.responseText)
+
+            let output = ''
+            output += `
+            <ul>
+            <li>${user.age}</li>
+            <li>${user.name}</li>
+            <li>${user.email}</li>
+            </ul>
+            `
+            document.getElementById('user').innerHTML = output
+        }
+    }
+
+    xhr.onerror = function(){
+        console.log("An error occured")
+    }
+
+    xhr.send()
+}
+
+
+document.getElementById('fetch-users').addEventListener('click',fetchUsers)
+
+function fetchUsers(){
+    let xhr = new XMLHttpRequest()
+
+    xhr.open('GET','users.json', true)
+
+    xhr.onload = function(){
+        if(this.status == 200){
+            // console.log(this.responseText)
+            let users = JSON.parse(this.responseText)
+
+            let output = ''
+            for(let user in users){
+                output += `<ul>
+                <li>${users[user].age}</li>
+                <li>${users[user].name}</li>
+                <li>${users[user].email}</li>
+                </ul>`
+            
+            }
+
+            
+            document.getElementById('users').innerHTML = output
+        }
+    }
+
+    xhr.onerror = function(){
+        console.log("An error occured")
+    }
+
+    xhr.send()
+
+    }
+
+    //WORKING WITH ONLINE API
+    document.getElementById('fetch-github-users').addEventListener('click', fetchGithubUsers)
+
+    function fetchGithubUsers(){
+        let xhr = new XMLHttpRequest()
+        xhr.open('GET', 'https://api.github.com/users', true)
+
+        xhr.onload = function(){
+            if(this.status == 200){
+                let users = JSON.parse(this.responseText)
+                let output = ""
+                for(let user in users){
+                    output += `
+                    <div class="user">
+                    <img src= ${users[user].avatar_url} width="100" height="100"/>
+                    <ul>
+                        <li>ID: ${users[user].id} </li>
+                        <li>User Name: ${users[user].login} </li>
+                        <li>Url: ${users[user].url} </li>
+                        <li>Followers Url: ${users[user].followers_url} </li>
+                    </ul>
+                    </div>
+                    `
+                }
+                document.getElementById('display-github-user').innerHTML = output;
+            }
+        }
+        xhr.send()
+    }
