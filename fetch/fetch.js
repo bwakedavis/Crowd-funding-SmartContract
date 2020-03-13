@@ -61,17 +61,17 @@ function fetchUsers(){
 document.getElementById("fetch-lorem-text").addEventListener('click', fetchLorem)
 
 function fetchLorem(){
-    fetch('').then((res)=>{
+    fetch('https://jsonplaceholder.typicode.com/posts').then((res)=>{
         return res.json()
-    }).then((users)=>{
+    }).then((post)=>{
         output = ""
 
-        users.forEach(user => {
+        post.forEach(post => {
             output += `
              <ul>
-                <li>${user.age}</li>
-                <li>${user.name}</li>
-                <li>${user.email}</li>
+                <li>${post.id}</li>
+                <li>${post.title}</li>
+                <li>${post.body}</li>
              </ul>
              `   
         });
@@ -81,4 +81,10 @@ function fetchLorem(){
     }).catch((err)=>{
         console.log(err)
     })
+}
+
+document.getElementById("add-post").addEventListener('click', addPost)
+
+function addPost(){
+    
 }

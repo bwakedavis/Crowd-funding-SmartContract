@@ -19,7 +19,19 @@
     <h1>Users</h1>
     <div id="users"></div>
 
-    <button id="fetch-glorem-text">Get Lorem Text</button>
+    <form action="" method="post" id="add-post">
+        <div>
+            <input type="text" id="title" placeholder="Title">
+        </div>
+        <div>
+            <textarea name="body" id="body" cols="30" rows="10" placeholder="body"></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit Post</button>
+        </div>
+    </form>
+
+    <button id="fetch-lorem-text">Get Lorem Text</button>
     <h1>Github Users</h1>
     <div id="display-lorem-text"></div>
     <script src="./fetch.js"></script>
