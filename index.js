@@ -29,7 +29,16 @@ console.log(id)
 
 //arrays
 var myList = ['Dodge', 'Duck','Dive','Done', ] //a numbered list of items
-console.log(myList, myList[0], myList[3],myList.length)
+myList.push('Davis') //Add array to top of the stack
+myList.pop() //Remove the item on top of the stack
+myList.unshift('Dan') //Add item to the bottom of the stack
+myList.shift() //Remove item from the bottom of the list
+myList.splice(0, 1, "Donstesh") //Replace items in the array
+myList.reverse()
+myList.sort()
+
+console.log(myList, myList[0], myList[3],myList.length-1,myList.indexOf('Duck'), myList.lastIndexOf('Duck')) 
+//indexOf Return index of the item else returns -1
 
 //functions
 function hello(name){
@@ -43,7 +52,9 @@ const myObject= {
     age:20,
     isCool:true
 }
-
+myObject.id = 34875;
+myObject["lastName"] = 'bwake'
+console.log(myObject)
 //if statements
 if(age ==20){
     console.log('You are twenty years old')
@@ -68,3 +79,4 @@ if(age==20 || name=='bwake'){
 
 //Ternary operator
 name =='bwake'? console.log(name): console.log('I dont know you ')
+
