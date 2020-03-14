@@ -85,7 +85,7 @@ function fetchLorem(){
 
 
 // Using POST
-document.getElementById("add-post").addEventListener('submit', addPost)
+const postForm = document.getElementById("add-post")
 
 function addPost(e){
     e.preventDefault();
@@ -108,7 +108,7 @@ function addPost(e){
     })
 
 }
-
+postForm.addEventListener('submit', addPost)
 
 // //Post Request
 // fetch('https://jsonplaceholder.typicode.com/posts', {
