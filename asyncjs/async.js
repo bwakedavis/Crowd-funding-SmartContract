@@ -18,6 +18,6 @@ function getPosts(){
             <li> ${post.body} </li>
             `
         })
-        document.getElementById('post-list').innerHTML = output
+        document.body.innerHTML = output
     },1000)
 }
