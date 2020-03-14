@@ -1,4 +1,4 @@
-# Learn AJAX
+# Perfoming GET Requests with AJAX
 
 Asynchronous JavaScript and XML(AJAX)
 
@@ -12,7 +12,9 @@ Asynchronous JavaScript and XML(AJAX)
 
 You gonna like it.Lets look how you can update data asynchonously with Ajax
 
-Create a html file where we will dispaly the data we fetch with ajax
+Create a html file where we will display the data we fetch with AJAX on the browser.
+
+Create a JavaScript file to put you JS code and link it or you can use script tag on you html
 **index.html**
 
 ```HTML
@@ -46,16 +48,21 @@ Create a html file where we will dispaly the data we fetch with ajax
    </body>
 ```
 
-Here is the JavaScript to fetch the data with Ajax using GET
+First we want to fetch data in a local text file and display it on the browser.
+Create a text file in your current directoy.I called it 'file.txt'
+
+The data is displayed asynchronously without reloading the bowser.Isn't that cool 😊
+
+**index.js**
 
 ```javascript
-    //Fetch a local text file
+    //Fetch a local text file on click
 document.getElementById('button').addEventListener('click', loadFile);
 
 function loadFile(){
     //Create the XHR Object
     let xhr = new XMLHttpRequest();
-    // Open the file
+    // Open the file,
     xhr.open('GET', './file.txt', true);
     // console.log(xhr.readyState)
 
@@ -69,14 +76,16 @@ function loadFile(){
             // console.log(this.responseText)
             document.getElementById('text-file').innerHTML = this.responseText
         }else{
-            document.getElementById('text-file').innerHTML = "Not FOUnd"
+            document.getElementById('text-file').innerHTML = "Not Found"
         }
     }
 
     xhr.onerror = function(){
         console.log("an error occured")
     }
-    //Using onreadystatechange
+
+    //Using onreadystatechange(You can use this method instead of onload)
+
         // HTTP STATUSES
         //200: "OK"
         //403: "Fobiden"
@@ -99,8 +108,28 @@ function loadFile(){
     xhr.send()
 }
 
-//WORKING WITH JSON
+```
 
+Next we're going to fetch a local json file with a single object
+Create a file in your directory called "user.json"
+and paste this
+
+**user.json**
+
+```json
+    {
+    "age":20,
+    "name": "Davis",
+    "email":"davis@gmail.com"
+    }
+```
+
+Lets display the object with ajax
+
+**index.js**
+
+```javascript
+  
 document.getElementById('fetch-user').addEventListener('click',fetchUser)
 
 function fetchUser(){
@@ -132,6 +161,40 @@ function fetchUser(){
     xhr.send()
 }
 
+```
+
+We have fetched a single json object successfully,cheers 🥂😇
+
+Let us now fetch an array of json objects.Create a file called 'users.json"
+
+**users.json**
+
+```json
+    [
+        {
+            "age":20,
+            "name": "Davis",
+            "email":"davis@gmail.com"
+        },
+        {
+            "age":22,
+            "name": "Dan",
+            "email":"dan@gmail.com"
+        },
+        {
+            "age":40,
+            "name": "Don",
+            "email":"don@gmail.com"
+        }
+    ]
+
+```
+
+Lets output it in the browser
+
+**index.js**
+
+```javascript
 
 document.getElementById('fetch-users').addEventListener('click',fetchUsers)
 
@@ -154,7 +217,7 @@ function fetchUsers(){
                 </ul>`
             
             }
-           
+
             document.getElementById('users').innerHTML = output
         }
     }
@@ -167,7 +230,15 @@ function fetchUsers(){
 
     }
 
-    //WORKING WITH ONLINE API
+```
+
+We did it,One more thing we want to work with a remote API we will be working with the github API and fetch users
+
+This is the url <https://api.github.com/users>
+
+**index.js**
+
+```javascript
     document.getElementById('fetch-github-users').addEventListener('click', fetchGithubUsers)
 
     function fetchGithubUsers(){
@@ -197,3 +268,5 @@ function fetchUsers(){
         xhr.send()
     }
 ```
+
+Cheers go enjoy AJAX 🥳 🥳

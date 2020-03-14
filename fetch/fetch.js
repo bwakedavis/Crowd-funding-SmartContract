@@ -83,8 +83,28 @@ function fetchLorem(){
     })
 }
 
-document.getElementById("add-post").addEventListener('click', addPost)
 
-function addPost(){
-    
+// Using POST
+document.getElementById("add-post").addEventListener('submit', addPost)
+
+function addPost(e){
+    e.preventDefault();
+    let title = document.getElementById('title').value
+    let body = document.getElementById('body').value
+
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: 'POST',
+        headers: {
+            'Accept':'application/json, text/json, */*',
+            'Content-type':'application/json'
+    },
+    body:JSON.stringify({title:title, body:body})
+    }).then((res)=>{
+        return res.json()
+    }).then((data)=>{
+        console.log(data)
+    }).catch((err)=>{
+        console.log(err)
+    })
+
 }

@@ -108,7 +108,6 @@ function fetchUsers(){
             
             }
 
-            
             document.getElementById('users').innerHTML = output
         }
     }
