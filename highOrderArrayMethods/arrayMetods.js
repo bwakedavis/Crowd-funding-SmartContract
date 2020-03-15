@@ -121,6 +121,25 @@ console.log(userEmails)
 
 // console.log(companyCategory)
 // //sort
+let ascendingN = numbers.sort((number1,number2)=>{
+    return number1 - number2
+})
+
+console.log(ascendingN)
+
+let descendingN = numbers.sort((number1,number2)=>{
+    return number2 - number1
+})
+
+console.log(descendingN)
+
+users.sort((user1,user2)=>{
+    if(user1.age > user2.age){
+        console.log(`${user1.name} is older than ${user2.name}`)
+    }else{
+        console.log(`${user2.name} is older than ${user1.name}`)
+    }
+})
 
 // const sortedCompanies = companies.sort((company1,company2)=>{
 //     if(company1.start <company2.start){
@@ -143,6 +162,17 @@ console.log(userEmails)
 // console.log(sortNumbersAscending)
 // //reduce
 
+let sum = numbers.reduce((total,number)=>{
+    return total + number
+},0)
+
+console.log(sum)
+
+let sumOfAges = users.reduce((total,user)=>{
+    return total + user.age
+},0)
+
+console.log(sumOfAges)
 // const sum = numbers.reduce((total,number)=>{
 //     return total + number
 // })
@@ -170,6 +200,17 @@ console.log(userEmails)
 
 // console.log(combined)
 
+//some
+let hasId = users.some((user)=>{
+    return user.id
+})
+
+console.log(hasId)
+
 //every
 
-//some
+let hasEmail = users.every((user)=>{
+    return user.email
+})
+
+console.log(hasEmail)
