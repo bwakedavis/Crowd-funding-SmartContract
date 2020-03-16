@@ -1,5 +1,7 @@
 # javaScript Deep Dive
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/766f29fd00d64f3a90d20637369e784b)](https://app.codacy.com/manual/bwakedavis/javaScript-algorithms-SmallProjetcs?utm_source=github.com&utm_medium=referral&utm_content=bwakedavis/javaScript-algorithms-SmallProjetcs&utm_campaign=Badge_Grade_Dashboard)
+
 ## Linking JavaScript to your HTML
 
 #### Method 1
