@@ -26,7 +26,7 @@ console.log(headerTitle.innerText);
 headerTitle.innerHTML = '<h3>Hello</h3>';
 header.style.borderBottom = 'solid 3px #000';
 
-GETELEMENTSBYCLASSNAME //
+// GETELEMENTSBYCLASSNAME
 var items = document.getElementsByClassName('list-group-item');
 console.log(items);
 console.log(items[1]);
@@ -41,7 +41,7 @@ for(var i = 0; i < items.length; i++){
   items[i].style.backgroundColor = '#f4f4f4';
 }
 
-GETELEMENTSBYTAGNAME //
+// GETELEMENTSBYTAGNAME
 var li = document.getElementsByTagName('li');
 console.log(li);
 console.log(li[1]);
@@ -56,7 +56,7 @@ for(var i = 0; i < li.length; i++){
   li[i].style.backgroundColor = '#f4f4f4';
 }
 
-QUERYSELECTOR //
+// QUERYSELECTOR 
 var header = document.querySelector('#main-header');
 header.style.borderBottom = 'solid 4px #ccc';
 
