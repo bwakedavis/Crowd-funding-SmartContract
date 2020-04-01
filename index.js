@@ -66,10 +66,26 @@ let characters = ['Davis','Daniel',"lyn","shawn"]
 // console.log(characters.shift("bwake"))
 // console.log(characters.unshift("bwake"))
 // console.log(characters)
-console.log(characters.sort())
-characters.splice(0,1,"Bwake")
-console.log(characters)
-characters.splice(0,2,"Bwake")
-console.log(characters)
-characters.splice(0.2)
-console.log(characters)
+// console.log(characters.sort())
+// characters.splice(0,1,"Bwake")
+// console.log(characters)
+// characters.splice(0,2,"Bwake")
+// console.log(characters)
+// characters.splice(0.2)
+// console.log(characters)
+
+//objects
+let person = {name:"Davis", age:20, isCool:true}
+
+let people = [
+    {name:"Davis", age:20, isCool:true},
+    {name:"bwake", age:20, isCool:true},
+    {name:"wafula", age:20, isCool:true}
+]
+
+people.unshift({name:"Davis", age:20, isCool:true})
+console.log(people[2].name)
+console.log(people)
+
+person.hungry = true
+console.log(person)
