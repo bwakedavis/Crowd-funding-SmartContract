@@ -1,7 +1,7 @@
 //declare variables with var,let,const
 
 let f_name = "davis"; //string
-l_name = 'bwake'
+let l_name = 'bwake'
 let id = 2345; //number
 let cooler = true; //boolean
 let xyz;
@@ -31,9 +31,20 @@ fiveDs = ['Davis',"Dan","Dick","Don","dave"]
 // console.log(fiveDs[0] + " aka " + fiveDs[4])
 
 //falsey - false,null,undefined,0,"",'',Nan
-if(age == 20){
-    console.log("you're 20")
-}else{
-    console.log("you're not 20")
+//comparison - <, >, ,<=, >=, !=, !==, ==, ===, &&, ||
+// if(age == 20){
+//     console.log("you're 20")
+// }else if(age < 20){
+//     console.log("you're below 20")
+// }else{
+//     console.log("you are above 20")
+// }
+
+if(f_name == "random name" || age == 20){
+    console.log("youre 20,whoever you are")
 }
+if(f_name == "davis" && age == 20){
+    console.log(f_name + " youre 20")
+}
+
 
