@@ -49,6 +49,20 @@ fiveDs = ['Davis',"Dan","Dick","Don","dave"]
 // }
 
 // Ternary operator
-cool == notCool ? console.log('True'):console.log("false")
+// cool == notCool ? console.log('True'):console.log("false")
 
+//Arrays
+let characters = ['Davis','Daniel',"lyn","shawn"]
 
+// console.log(characters)
+// console.log(characters.length)
+// console.log(characters[2])
+// console.log(characters[characters.length - 1])
+// console.log(characters.push("Dancun"))
+// console.log(characters)
+// console.log(characters.indexOf("Dancun"))
+// console.log(characters.pop())
+// console.log(characters)
+// console.log(characters.shift("bwake"))
+// console.log(characters.unshift("bwake"))
+// console.log(characters)
