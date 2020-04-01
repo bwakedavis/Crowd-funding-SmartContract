@@ -3,7 +3,8 @@
 let f_name = "davis"; //string
 let l_name = 'bwake'
 let id = 2345; //number
-let cooler = true; //boolean
+let cool = true; //boolean
+notCool = false
 let xyz;
 let age = 20;
 
@@ -40,11 +41,14 @@ fiveDs = ['Davis',"Dan","Dick","Don","dave"]
 //     console.log("you are above 20")
 // }
 
-if(f_name == "random name" || age == 20){
-    console.log("youre 20,whoever you are")
-}
-if(f_name == "davis" && age == 20){
-    console.log(f_name + " youre 20")
-}
+// if(f_name == "random name" || age == 20){
+//     console.log("youre 20,whoever you are")
+// }
+// if(f_name == "davis" && age == 20){
+//     console.log(f_name + " youre 20")
+// }
+
+// Ternary operator
+cool == notCool ? console.log('True'):console.log("false")
 
 
