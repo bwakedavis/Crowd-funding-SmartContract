@@ -13,7 +13,7 @@ id = 5432;
 xyz = null //nothing
 let fiveDs;
 // console.log(name,id,alive,xyz);
-fiveDs = ['Davis',"Dan","Dick","Don","dave"]
+fiveDs = ["Davis","Dan","Dick","Don","dave"]
 // name += ' bwake'
 // console.log(name)
 // id +=2
@@ -83,9 +83,15 @@ let people = [
     {name:"wafula", age:20, isCool:true}
 ]
 
-people.unshift({name:"Davis", age:20, isCool:true})
-console.log(people[2].name)
-console.log(people)
+// people.unshift({name:"Davis", age:20, isCool:true})
+// console.log(people[2].name)
+// console.log(people)
 
-person.hungry = true
-console.log(person)
+// person.hungry = true
+// console.log(person)
+
+//for loops
+//initialize,test, increment
+for(let name = "";name<fiveDs.length;name++){
+    console.log( fiveDs[name])
+}
