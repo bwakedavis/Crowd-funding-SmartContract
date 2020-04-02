@@ -123,13 +123,27 @@ let total = 0
 
 //arrow functions
 
-const sayhi = (name) => name + " Keep pushing man!";
+// const sayhi = (name) => name + " Keep pushing man!";
 
-console.log(sayhi("Davis"))
+// console.log(sayhi("Davis"))
 
-let names = fiveDs.forEach((name, index)=>console.log(index,name))
+// let names = fiveDs.forEach((name, index)=>console.log(index,name))
 
 //local variable,global variable- non initialized variables with let,var or const become global by default
 // Hoisting - the process of taking two passes through 
 // js file exists,first pass hoisting all declarations 
 // to the top of the file 
+
+//Strings
+let fname = new String("Davis") ;
+let snane = String("Bwake")
+let lname = "Wafula"
+
+console.log(fname.toUpperCase())
+console.log(fname.toLocaleUpperCase())
+console.log(fname.toLowerCase())
+console.log(fname.substring(2))
+console.log(fname.substring(0, 10))
+
+let concated = "".concat(fname, " ", snane,".")
+console.log(concated)
