@@ -109,7 +109,27 @@ let total = 0
 // }
 
 // do...while loop
-do{
-    total += Math.floor(Math.random() * 5) + 1;
-    console.log(total)
-}while(total<30)
+// do{
+//     total += Math.floor(Math.random() * 5) + 1;
+//     console.log(total)
+// }while(total<30)
+
+//functions
+// function sayHello(name){
+//     return "Hello " +name+ " feel motivated."
+// }
+
+// console.log(sayHello("Davis"))
+
+//arrow functions
+
+const sayhi = (name) => name + " Keep pushing man!";
+
+console.log(sayhi("Davis"))
+
+let names = fiveDs.forEach((name, index)=>console.log(index,name))
+
+//local variable,global variable- non initialized variables with let,var or const become global by default
+// Hoisting - the process of taking two passes through 
+// js file exists,first pass hoisting all declarations 
+// to the top of the file 
