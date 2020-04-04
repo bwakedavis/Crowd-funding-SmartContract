@@ -97,9 +97,9 @@ let people = [
 // }
 
 //for in loop
-for(let prop in people){
-    console.log(people[prop].name)
-}
+// for(let prop in people){
+//     console.log(people[prop].name)
+// }
 
 //while loop
 let total = 0
@@ -135,15 +135,28 @@ let total = 0
 // to the top of the file 
 
 //Strings
-let fname = new String("Davis") ;
-let snane = String("Bwake")
-let lname = "Wafula"
+// let fname = new String("Davis") ;
+// let snane = String("Bwake")
+// let lname = "Wafula"
 
-console.log(fname.toUpperCase())
-console.log(fname.toLocaleUpperCase())
-console.log(fname.toLowerCase())
-console.log(fname.substring(2))
-console.log(fname.substring(0, 10))
+// console.log(fname.toUpperCase())
+// console.log(fname.toLocaleUpperCase())
+// console.log(fname.toLowerCase())
+// console.log(fname.substring(2))
+// console.log(fname.substring(0, 10))
 
-let concated = "".concat(fname, " ", snane,".")
-console.log(concated)
+// let concated = "".concat(fname, " ", snane,".")
+// console.log(concated)
+
+//math methobs - round, floor, ceil, random,
+let snumber = parseInt("254")
+let fnumber = parseFloat("254.718")
+//toFixed
+
+// console.log(snumber)
+// console.log(fnumber)
+
+let greeting = "hello there"
+
+let sentence = greeting.split("hello")
+console.log(sentence)
