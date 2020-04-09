@@ -187,31 +187,58 @@ let pop_cost = 3.00
 
 //user's money
 let account_balance = 15.75
-
+function checkBalance(amount){
+    if(account_balance - amount >= 0){
+        return true
+    }else{
+        console.log("insufficient funds")
+        return false
+    }
+}
 // drink beer
 // account_balance = account_balance - beer_cost
 // console.log(account_balance)
 function drink_beer(){
-    account_balance = account_balance - beer_cost
-    console.log(account_balance)
+    if(checkBalance(beer_cost)){
+        account_balance = account_balance - beer_cost
+        console.log("Enjoy your beer")
+    }
+    console.log("\tBalance ", account_balance.toFixed(2))
 }
+
 
 //eat burger
 // account_balance = account_balance - burger_cost
 // console.log(account_balance)
 function eat_bugger(){
-    account_balance = account_balance - burger_cost
-    console.log(account_balance)
+    if(checkBalance(burger_cost)){
+        account_balance = account_balance - beer_cost
+        console.log("Enjoy your beer")
+    }
+    console.log("\tBalance ", account_balance.toFixed(2))
 }
 
 //drink pop
 // account_balance = account_balance - pop_cost
 // console.log(account_balance)
 function drink_pop(){
-    account_balance = account_balance - pop_cost
-    console.log(account_balance)
+    if(checkBalance(pop_cost)){
+        account_balance = account_balance - beer_cost
+        console.log("Enjoy your beer")
+    }
+    console.log("\tBalance ", account_balance.toFixed(2))
 }
 
-drink_beer()
-eat_bugger()
-drink_pop()
+// drink_beer()
+// eat_bugger()
+// drink_pop()
+
+let mealList = [drink_beer, eat_bugger, drink_pop]
+
+function visitCarnival(mList){
+    for(let i =0;i<mList.length;i++){
+        mList[i].call()
+    }
+}
+
+visitCarnival(mealList)
