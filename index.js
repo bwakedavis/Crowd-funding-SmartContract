@@ -1,162 +1,217 @@
-//declare variables with var,let,const
+//Variables declared with var,let and const
+// let name = "davis" //Datatype string
+// let id = 2345 //DataType number
+// let alive = true //DataType boolean
+// let xyz = null //nothing
+// let fiveDs; //undefined
+// name = "bwake" //re-assigning
+// fiveDs = ['Dodge','Duck', 'Dip','Dive','Diss'] //arrays
+// //math operations
+// id += 7 +3
+// id -= 7 -3
+// id /= 7 /3
+// id *= 7 *3
+// id %= 7 %3
+// let s_name  = name + " has an id of " + id
+// console.log(name, id, alive, xyz, fiveDs, s_name, fiveDs[0])
 
-let f_name = "davis"; //string
-let l_name = 'bwake'
-let id = 2345; //number
-let cool = true; //boolean
-notCool = false
-let xyz;
-let age = 20;
+// let f_name = "Davis"
+// let l_name = "Bwake"
+// let age = 45
+// let first = true
+// let last = false
 
-//re-assign variables with new values
-id = 5432;
-xyz = null //nothing
-let fiveDs;
-// console.log(name,id,alive,xyz);
-fiveDs = ["Davis","Dan","Dick","Don","dave"]
-// name += ' bwake'
-// console.log(name)
-// id +=2
-// console.log(id)
-// id -=2
-// console.log(id)
-// id /=2
-// console.log(id)
-// id *=2
-// console.log(id)
-// id %=2
-// console.log(id)
+// //Falsey - false, null, undefined, 0, "", '',NaN
+// // Binary Logical operators
+// //&&-AND , ||-OR, ==-Equalto, ,===, != not equal to, >=, <=, !,
+// //Ternary Operators
 
-// console.log(fiveDs);
-// console.log(fiveDs.length);
-// console.log(fiveDs[0] + " aka " + fiveDs[4])
-
-//falsey - false,null,undefined,0,"",'',Nan
-//comparison - <, >, ,<=, >=, !=, !==, ==, ===, &&, ||
-// if(age == 20){
-//     console.log("you're 20")
-// }else if(age < 20){
-//     console.log("you're below 20")
+// if(first == last){
+//     console.log("wont happen")
 // }else{
-//     console.log("you are above 20")
+//     console.log("you are first if not last")
 // }
 
-// if(f_name == "random name" || age == 20){
-//     console.log("youre 20,whoever you are")
-// }
-// if(f_name == "davis" && age == 20){
-//     console.log(f_name + " youre 20")
-// }
-
-// Ternary operator
-// cool == notCool ? console.log('True'):console.log("false")
-
-//Arrays
-let characters = ['Davis','Daniel',"lyn","shawn"]
-
-// console.log(characters)
-// console.log(characters.length)
-// console.log(characters[2])
-// console.log(characters[characters.length - 1])
-// console.log(characters.push("Dancun"))
-// console.log(characters)
-// console.log(characters.indexOf("Dancun"))
-// console.log(characters.pop())
-// console.log(characters)
-// console.log(characters.shift("bwake"))
-// console.log(characters.unshift("bwake"))
-// console.log(characters)
-// console.log(characters.sort())
-// characters.splice(0,1,"Bwake")
-// console.log(characters)
-// characters.splice(0,2,"Bwake")
-// console.log(characters)
-// characters.splice(0.2)
-// console.log(characters)
-
-//objects
-let person = {name:"Davis", age:20, isCool:true}
-
-let people = [
-    {name:"Davis", age:20, isCool:true},
-    {name:"bwake", age:20, isCool:true},
-    {name:"wafula", age:20, isCool:true}
-]
-
-// people.unshift({name:"Davis", age:20, isCool:true})
-// console.log(people[2].name)
-// console.log(people)
-
-// person.hungry = true
-// console.log(person)
-
-//for loops
-//initialize,test, increment
-// for(let name = "";name<fiveDs.length;name++){
-//     console.log( fiveDs[name])
+// first == last? console.log("nope"):console.log("yep")
+// if(age <= 40){
+//     console.log("you $0 years old or less")
+// }else if((age > 40) && (age <=50)){
+//     console.log("youre between 41 nad 50 years old")
+// }else if(age < 0){
+//     console.log("invalid age")
 // }
 
-//for in loop
-// for(let prop in people){
-//     console.log(people[prop].name)
+// let ingredients = ['lettuce', 'cheddar', 'ham']
+
+// let sandwithes = (ingredient)=>{
+//     for(let i of ingredients){
+//         if(i == ingredient){
+//             return true
+//         }
+//         return false
+//     }
 // }
 
-//while loop
-let total = 0
-// while(total <30){
-//     total += Math.floor(Math.random() * 5) + 1;
-//     console.log(total)
+// if(sandwithes("lettuce")  || sandwithes("chicken") ||sandwithes("beef")){
+//     console.log("Sandwitch has beef")
+// }else{
+//     console.log("No meat") 
 // }
 
-// do...while loop
+// if(sandwithes('lettuce') && sandwithes("onion")){
+//     console.log("Sandwith has lettuce and onion")
+// }else{
+//     console.log("Sandwith has NO lettuce and onion") 
+// }
+
+
+// if(sandwithes('chedar') && sandwithes("lettuce") || sandwithes("onion")){
+//     console.log("Sandwith has lettuce and onion")
+// }else{
+//     console.log("Sandwith has NO lettuce and onion") 
+// }
+
+// //Arrays - A numbered list of items
+
+// let characters = ['Luke','Leia','Han', 'Chewie']
+
+// console.log(characters)
+// // console.log(characters.length) //counts the elements
+// // console.log(characters[2]) //returns the third element
+// // console.log(characters[characters.length -1]) //returns the last element
+
+// // characters.push("Anakin") //Adds an element on top of the stack
+// // characters.push("Obiwan")
+// // console.log(characters)
+
+// // characters.pop() //reomves the top element
+// // console.log(characters)
+
+// // characters.unshift('Pepe') //adds an element on the bottom
+// // characters.unshift('Bruno')
+// // console.log(characters)
+
+// // characters.shift() //removes the element from the bottom
+// // console.log(characters)
+
+
+// characters.splice(0, 1, "Ray") //replacing items
+// console.log(characters)
+
+// characters.splice(1, 2, "Stacy")
+// console.log(characters)
+
+// characters.splice(1, 1, "Mahrion", "Marion")
+// console.log(characters)
+
+// characters.push("Bwake","Wafula", "Patience")
+// console.log(characters)
+
+// characters.reverse() //reverse position of the item
+// console.log(characters)
+
+// characters.sort() //sorts the item
+// console.log(characters)
+
+// let position = characters.indexOf('Wafula') //returns position or negative
+// console.log(position)
+// position = characters.indexOf('Davis')
+// console.log(position)
+
+//Objects
+
+// let dog = {name:"Woody",type:"dog"}
+// let cat = {name:"Bob", type:"cat"}
+// console.log(dog, cat)
+
+// let petNames = ["Woody", "Bob"]
+// console.log(petNames)
+
+// let pets = [{name:"Woody",type:"dog"}, cat]
+// console.log(pets)
+
+// pets.push({"name":"Roxy",type:"dog"})
+// console.log(pets)
+
+// cat.age = 2
+// dog["age"] = 14
+// pets[2].age = 6
+// console.log(dog.age)
+// console.log(pets)
+
+// //JS for loops 
+// let names = ['Jeff','Donnie', 'Walter', 'Bunny','Karl', 'Brandt',
+// 'Maude', 'Jackie']
+// // Initialize, test,increment
+// for(let i = 0;i<names.length;i++){
+//     console.log(names[i])
+// }
+// //Reverse
+// for(let i =names.length;i>=0;i--){
+//     console.log(names[i])
+// }
+
+// //FOR IN loop
+// let monsters = {'Canada':'Sasquatch','Nepal':'Veti','Scotland':'Loch Mess Monster'}
+// let pet = ['wooddy','bob','rozy']
+// console.log(monsters)
+
+// for(let monster in monsters){
+//     console.log(`${monster} - ${monsters[monster]}`)
+// }
+// for (let mypet in pet){
+//     console.log(`${mypet} - ${pet[mypet]}`)
+// }
+
+// //Do while loop
+// let total = 0
+
 // do{
-//     total += Math.floor(Math.random() * 5) + 1;
-//     console.log(total)
+//     total += Math.floor(Math.random() * 5) 
+//         + 1
+//         console.log(total)
 // }while(total<30)
 
-//functions
-// function sayHello(name){
-//     return "Hello " +name+ " feel motivated."
+// //While loop
+// while(total<30){
+//     total += Math.floor(Math.random() * 5) 
+//     + 1
+//     console.log(total)
 // }
 
-// console.log(sayHello("Davis"))
+//FUNCTIONS
+// food prices
+let beer_cost = 6.75
+let burger_cost = 5.00
+let pop_cost = 3.00
 
-//arrow functions
+//user's money
+let account_balance = 15.75
 
-// const sayhi = (name) => name + " Keep pushing man!";
+// drink beer
+// account_balance = account_balance - beer_cost
+// console.log(account_balance)
+function drink_beer(){
+    account_balance = account_balance - beer_cost
+    console.log(account_balance)
+}
 
-// console.log(sayhi("Davis"))
+//eat burger
+// account_balance = account_balance - burger_cost
+// console.log(account_balance)
+function eat_bugger(){
+    account_balance = account_balance - burger_cost
+    console.log(account_balance)
+}
 
-// let names = fiveDs.forEach((name, index)=>console.log(index,name))
+//drink pop
+// account_balance = account_balance - pop_cost
+// console.log(account_balance)
+function drink_pop(){
+    account_balance = account_balance - pop_cost
+    console.log(account_balance)
+}
 
-//local variable,global variable- non initialized variables with let,var or const become global by default
-// Hoisting - the process of taking two passes through 
-// js file exists,first pass hoisting all declarations 
-// to the top of the file 
-
-//Strings
-// let fname = new String("Davis") ;
-// let snane = String("Bwake")
-// let lname = "Wafula"
-
-// console.log(fname.toUpperCase())
-// console.log(fname.toLocaleUpperCase())
-// console.log(fname.toLowerCase())
-// console.log(fname.substring(2))
-// console.log(fname.substring(0, 10))
-
-// let concated = "".concat(fname, " ", snane,".")
-// console.log(concated)
-
-//math methobs - round, floor, ceil, random,
-let snumber = parseInt("254")
-let fnumber = parseFloat("254.718")
-//toFixed
-
-// console.log(snumber)
-// console.log(fnumber)
-
-let greeting = "hello there"
-
-let sentence = greeting.split("hello")
-console.log(sentence)
+drink_beer()
+eat_bugger()
+drink_pop()
