@@ -3,9 +3,9 @@
 // let id = 2345 //DataType number
 // let alive = true //DataType boolean
 // let xyz = null //nothing
-// let fiveDs; //undefined
+let fiveDs; //undefined
 // name = "bwake" //re-assigning
-// fiveDs = ['Dodge','Duck', 'Dip','Dive','Diss'] //arrays
+fiveDs = ['Dodge','Duck', 'Dip','Dive','Diss'] //arrays
 // //math operations
 // id += 7 +3
 // id -= 7 -3
@@ -14,7 +14,22 @@
 // id %= 7 %3
 // let s_name  = name + " has an id of " + id
 // console.log(name, id, alive, xyz, fiveDs, s_name, fiveDs[0])
-
+// let hasDuck = fiveDs.includes('Duck')
+// console.log(hasDuck)
+// let hasDan = fiveDs.includes('Dan')
+// console.log(hasDan)
+// let test = fiveDs.some((title,index)=>{
+//     console.log(index,title)
+//     return false
+// })
+// fiveDs.forEach((item,index,array)=>{
+//     console.log(index,item)
+// })
+// let mappedDs = fiveDs.map((item,index,array)=>{
+//     let len = item.length
+//     return len
+// })
+// console.log(mappedDs)
 // let f_name = "Davis"
 // let l_name = "Bwake"
 // let age = 45
@@ -179,66 +194,136 @@
 //     console.log(total)
 // }
 
-//FUNCTIONS
-// food prices
-let beer_cost = 6.75
-let burger_cost = 5.00
-let pop_cost = 3.00
+// //FUNCTIONS
+// // food prices
+// let beer_cost = 6.75
+// let burger_cost = 5.00
+// let pop_cost = 3.00
 
-//user's money
-let account_balance = 15.75
-function checkBalance(amount){
-    if(account_balance - amount >= 0){
-        return true
-    }else{
-        console.log("insufficient funds")
-        return false
-    }
-}
-// drink beer
-// account_balance = account_balance - beer_cost
-// console.log(account_balance)
-function drink_beer(){
-    if(checkBalance(beer_cost)){
-        account_balance = account_balance - beer_cost
-        console.log("Enjoy your beer")
-    }
-    console.log("\tBalance ", account_balance.toFixed(2))
-}
+// //user's money
+// let account_balance = 15.75
+// function checkBalance(amount){
+//     if(account_balance - amount >= 0){
+//         return true
+//     }else{
+//         console.log("insufficient funds")
+//         return false
+//     }
+// }
+// // drink beer
+// // account_balance = account_balance - beer_cost
+// // console.log(account_balance)
+// function drink_beer(){
+//     if(checkBalance(beer_cost)){
+//         account_balance = account_balance - beer_cost
+//         console.log("Enjoy your beer")
+//     }
+//     console.log("\tBalance ", account_balance.toFixed(2))
+// }
 
 
-//eat burger
-// account_balance = account_balance - burger_cost
-// console.log(account_balance)
-function eat_bugger(){
-    if(checkBalance(burger_cost)){
-        account_balance = account_balance - beer_cost
-        console.log("Enjoy your beer")
-    }
-    console.log("\tBalance ", account_balance.toFixed(2))
-}
+// //eat burger
+// // account_balance = account_balance - burger_cost
+// // console.log(account_balance)
+// function eat_bugger(){
+//     if(checkBalance(burger_cost)){
+//         account_balance = account_balance - beer_cost
+//         console.log("Enjoy your beer")
+//     }
+//     console.log("\tBalance ", account_balance.toFixed(2))
+// }
 
-//drink pop
-// account_balance = account_balance - pop_cost
-// console.log(account_balance)
-function drink_pop(){
-    if(checkBalance(pop_cost)){
-        account_balance = account_balance - beer_cost
-        console.log("Enjoy your beer")
-    }
-    console.log("\tBalance ", account_balance.toFixed(2))
-}
+// //drink pop
+// // account_balance = account_balance - pop_cost
+// // console.log(account_balance)
+// function drink_pop(){
+//     if(checkBalance(pop_cost)){
+//         account_balance = account_balance - beer_cost
+//         console.log("Enjoy your beer")
+//     }
+//     console.log("\tBalance ", account_balance.toFixed(2))
+// }
 
-// drink_beer()
-// eat_bugger()
-// drink_pop()
+// // drink_beer()
+// // eat_bugger()
+// // drink_pop()
 
-let mealList = [drink_beer, eat_bugger, drink_pop]
+// let mealList = [drink_beer, eat_bugger, drink_pop]
 
-function visitCarnival(mList){
-    for(let i =0;i<mList.length;i++){
-        mList[i].call()
-    }
-}
+// function visitCarnival(mList){
+//     for(let i =0;i<mList.length;i++){
+//         mList[i].call()
+//     }
+// }
 
-visitCarnival(mealList)
+// visitCarnival(mealList)
+
+// //Arrow functions
+
+let numbers = [123,234, 456, 567]
+// let sum = numbers.reduce((passrdIn, item)=>{
+//     return passrdIn + item
+// },0)
+// console.log(sum)
+let greater = numbers.every((num)=>{
+    return num>100
+})
+console.log(greater)
+let greaterr = numbers.every((num)=>{
+    return num>400
+})
+console.log(greaterr)
+// let c = fiveDs.concat(numbers).sort()
+// console.log(c)
+// let namess = ['Alex', 'Bree', 'Cole', 'Devon', 'Riley']
+
+// let big = numbers.filter((item)=>item>300)
+// console.log(big)
+// let oddNumbers = numbers.filter((num)=>{
+//     return num & 1;
+// })
+// console.log(oddNumbers)
+// namess.forEach((item,index)=>{
+//     console.log(index,item)
+// })
+
+// //Hoisting - the process of taking two passes through the js file_exists. First pass hoist all the declarations to the top of the file
+
+// let str1 = new String('Toy Stroy')
+// let str2 = String('Wale')
+// let str3 = "Cars"
+
+// str1.toUpperCase()
+// console.log("bwake".toUpperCase())
+// console.log(str3)
+
+// let r = str1.substr(1,3)
+// console.log(r)
+
+// let conkat = "".concat(str1, ", ", str2, ", ",str3)
+// console.log(conkat)
+
+// let num = parseInt("343.53")
+// console.log(num)
+// let num2 = parseFloat("343.53")
+// console.log(num2)
+// let num3 = parseInt("343",2)
+// console.log(num3)
+
+////Math.round, Math.ceil, Math.random, Math.floor,Math.max
+//Number.parseInt()
+
+//Array.join and String.split
+// let sentence = "hello my name is Davis"
+
+// let words = sentence.split(" ").sort()
+// console.log(words)
+
+// let chars = sentence.split("name")
+// console.log(chars)
+
+// let char = sentence.split("")
+// console.log(char)
+
+// let hypheneted = words.join("-")
+// console.log(hypheneted)
