@@ -460,16 +460,46 @@ let numbers = [123,234, 456, 567]
 //     }
 // }
 
-//setTimeout,Setinterval,clearTimeout,clearInterval
+// //setTimeout,Setinterval,clearTimeout,clearInterval
 
-function log(msg){
-    console.log("hellow ", msg)
+// function log(msg){
+//     console.log("hellow ", msg)
+// }
+
+// let davis = setTimeout(log, 1000, "Davis")
+// clearTimeout(davis)
+// let bwake = setTimeout(log, 500, "Bwake")
+// clearTimeout(bwake)
+
+// let come = setInterval(log,2000,"I'll come again")
+// clearInterval(come)
+
+//Immediately invoked function Expressions
+function doSomething(){
+    //function declared
+    let sum = 2+23
+    console.log(` Am just trying to be useful lol`)
 }
+doSomething; //does nothing
+doSomething() //runs the function and waits for areturn value
 
-let davis = setTimeout(log, 1000, "Davis")
-clearTimeout(davis)
-let bwake = setTimeout(log, 500, "Bwake")
-clearTimeout(bwake)
+let somethingElse = (()=>{
+    //function expression
+    console.log("i was returned")
+    return true
+})()
 
-let come = setInterval(log,2000,"I'll come again")
-clearInterval(come)
+let doingSomething = ((nm)=>{
+    //function expression
+    
+    return {
+        name:nm,
+        id:123,
+        x:function(){
+            console.log("am safe here")
+        }
+    }
+})('Alex')
+
+console.log(doingSomething.name, doingSomething.id, )
+doingSomething.x()
