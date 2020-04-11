@@ -504,39 +504,63 @@ let numbers = [123,234, 456, 567]
 // console.log(doingSomething.name, doingSomething.id, )
 // doingSomething.x()
 
-//EventListeners
-let btn = document.getElementById('btn')
-let link = document.getElementById('link')
-let txt = document.getElementById('txt')
+// //EventListeners
+// let btn = document.getElementById('btn')
+// let link = document.getElementById('link')
+// let txt = document.getElementById('txt')
 
-document.addEventListener('DOMContentLoaded', init)
-function init(){
-    btn.addEventListener('click', buttonClicked)
-    function buttonClicked(ev){
-        console.log(ev.type, ev.target, ev.currentTarget)
-    }
+// document.addEventListener('DOMContentLoaded', init)
+// function init(){
+//     btn.addEventListener('click', buttonClicked)
+//     function buttonClicked(ev){
+//         console.log(ev.type, ev.target, ev.currentTarget)
+//     }
     
-    link.addEventListener('click', linkClicked)
-    function linkClicked(ev){
-        ev.preventDefault();
+//     link.addEventListener('click', linkClicked)
+//     function linkClicked(ev){
+//         ev.preventDefault();
         
-        console.log(ev.type, ev.target, ev.currentTarget)
-    }
+//         console.log(ev.type, ev.target, ev.currentTarget)
+//     }
     
-    link.addEventListener('click', (ev)=>{
-        ev.preventDefault();
-        console.log("link clicked")
-    })
+//     link.addEventListener('click', (ev)=>{
+//         ev.preventDefault();
+//         console.log("link clicked")
+//     })
     
-    txt.addEventListener("input", (ev)=>{
-        console.log(ev.target, ev.target.value)
-    })
-    txt.addEventListener("change", (ev)=>{
-        console.log(ev.target, ev.target.value)
-    })
-    txt.addEventListener("blur", (ev)=>{
-        console.log(ev.target, ev.target.value)
-    })
+//     txt.addEventListener("input", (ev)=>{
+//         console.log(ev.target, ev.target.value)
+//     })
+//     txt.addEventListener("change", (ev)=>{
+//         console.log(ev.target, ev.target.value)
+//     })
+//     txt.addEventListener("blur", (ev)=>{
+//         console.log(ev.target, ev.target.value)
+//     })
+// }
+
+//Event Bubbling and Propagation
+//element.addEvemtListener(type,func,useCapture)
+let m = document.getElementById('m')
+let d = document.getElementById('d')
+let p = document.getElementById('p')
+let s = document.getElementById('s')
+let l = console.log
+
+let highlight = (ev)=>{
+    //add bg to gold
+    let target = ev.currentTarget
+    target.className = 'gold'
 }
+
+
+d.addEventListener('click', (ev)=>{
+    l("Hi am a div")
+})
+let elements = [m, d, p, s]
+elements.forEach((el)=>{
+    el.addEventListener('click',highlight)
+})
+
 
 
