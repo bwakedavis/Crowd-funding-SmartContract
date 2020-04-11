@@ -265,14 +265,14 @@ let numbers = [123,234, 456, 567]
 //     return passrdIn + item
 // },0)
 // console.log(sum)
-let greater = numbers.every((num)=>{
-    return num>100
-})
-console.log(greater)
-let greaterr = numbers.every((num)=>{
-    return num>400
-})
-console.log(greaterr)
+// let greater = numbers.every((num)=>{
+//     return num>100
+// })
+// console.log(greater)
+// let greaterr = numbers.every((num)=>{
+//     return num>400
+// })
+// console.log(greaterr)
 // let c = fiveDs.concat(numbers).sort()
 // console.log(c)
 // let namess = ['Alex', 'Bree', 'Cole', 'Devon', 'Riley']
@@ -327,3 +327,19 @@ console.log(greaterr)
 
 // let hypheneted = words.join("-")
 // console.log(hypheneted)
+
+//Chaining Array Methods
+let people = [
+    {id:123,name:"Davis",email:"davis@gmail.com"},
+    {id:456,name:"Dan",email:"dan@yahoo.com"},
+    {id:789,name:"Doly",email:"doly@gmail.com"},
+    {id:321,name:"marion",email:"marion@yahoo.com"},
+    {id:654,name:"Winnie",email:"weeny@yahoo.com"}
+]
+
+let yahoo = people.filter((person)=>{
+    return person.email.indexOf('@yahoo.com') > -1
+}).map((person)=>{
+    return person.name
+})
+console.log("list of yahoo user:", yahoo)
