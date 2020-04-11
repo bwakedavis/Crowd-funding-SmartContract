@@ -370,3 +370,92 @@ let numbers = [123,234, 456, 567]
 // }).catch((err)=>{
 //     console.log(err)
 // })
+
+// //Function Currying - means a function can be passed to a function or returned from a function
+
+// function x(a){
+//     console.log("x")
+//     a() //will return func y
+//     return a
+// }
+
+// function y(){
+//     console.log("y")
+// }
+
+// let b = x(y)
+// b()
+
+// function greet(msg){
+//     // console.log(msg)
+//     return function (name){
+//         console.log(msg, name)
+//     }
+// }
+// let english = greet("Hi")
+// let espanol = greet("Hola")
+// let svenske = greet("Hej")
+// let deutsch = greet("Tag")
+
+// english("Davis")
+// espanol("Davis")
+// svenske("Davis")
+// deutsch("Davis")
+
+// //Callback functions - 
+// function doThing(other){
+//     let x = 7
+//     //Do lots of stuff
+//     let name = "Davis"
+//     other(name)
+
+// }
+
+// function hello(nm){
+//     console.log("hello ", nm)
+// }
+
+// doThing(hello)
+
+// let u_name = ['Stacy','Harriet', 'Mary', 'Tom','Carlos']
+// u_name.forEach(hello)
+// setTimeout(hello,2000,"Bwake")
+
+// navigator.geolocation.getCurrentPosition(goPosition,positionError,{})
+
+// function goPosition(position){
+//     //position details
+// }
+// function positionError(error){
+//     console.log(error)
+// }
+
+//Nested loops and multi-dimensional objects
+
+let twoD = [[1, 2, 3, 4, 5, 6, 7],[8, 10, 5, 6],[123, 54, 12, 11, 6 ,78]]
+
+let bigHero = {
+    characters:[
+        {name:"Hiro", voice:"Ryan Potter"},
+        {name:"Baymax", voice:"Scot Adsit"},
+        {name:"Go Go Tamago", voice:"Jamie Chung"},
+        {name:"Fred", voice:"T.J Mille"}
+    ]
+}
+
+//nested for loop
+for(let i=0;i<twoD.length;i++){
+    for(let n=0;n<twoD[i].length;n++){
+        console.log(twoD[i][n])
+    }
+}
+
+let chars = bigHero.characters
+console.log(chars)
+
+for(let i = 0;i < bigHero.characters.length;i++){
+    console.log(bigHero.characters[i])
+    for(let prop in chars[i]){
+        console.log(prop,chars[i][prop])
+    }
+}
