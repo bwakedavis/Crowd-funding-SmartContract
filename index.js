@@ -474,32 +474,69 @@ let numbers = [123,234, 456, 567]
 // let come = setInterval(log,2000,"I'll come again")
 // clearInterval(come)
 
-//Immediately invoked function Expressions
-function doSomething(){
-    //function declared
-    let sum = 2+23
-    console.log(` Am just trying to be useful lol`)
-}
-doSomething; //does nothing
-doSomething() //runs the function and waits for areturn value
+// //Immediately invoked function Expressions
+// function doSomething(){
+//     //function declared
+//     let sum = 2+23
+//     console.log(` Am just trying to be useful lol`)
+// }
+// doSomething; //does nothing
+// doSomething() //runs the function and waits for areturn value
 
-let somethingElse = (()=>{
-    //function expression
-    console.log("i was returned")
-    return true
-})()
+// let somethingElse = (()=>{
+//     //function expression
+//     console.log("i was returned")
+//     return true
+// })()
 
-let doingSomething = ((nm)=>{
-    //function expression
+// let doingSomething = ((nm)=>{
+//     //function expression
     
-    return {
-        name:nm,
-        id:123,
-        x:function(){
-            console.log("am safe here")
-        }
-    }
-})('Alex')
+//     return {
+//         name:nm,
+//         id:123,
+//         x:function(){
+//             console.log("am safe here")
+//         }
+//     }
+// })('Alex')
 
-console.log(doingSomething.name, doingSomething.id, )
-doingSomething.x()
+// console.log(doingSomething.name, doingSomething.id, )
+// doingSomething.x()
+
+//EventListeners
+let btn = document.getElementById('btn')
+let link = document.getElementById('link')
+let txt = document.getElementById('txt')
+
+document.addEventListener('DOMContentLoaded', init)
+function init(){
+    btn.addEventListener('click', buttonClicked)
+    function buttonClicked(ev){
+        console.log(ev.type, ev.target, ev.currentTarget)
+    }
+    
+    link.addEventListener('click', linkClicked)
+    function linkClicked(ev){
+        ev.preventDefault();
+        
+        console.log(ev.type, ev.target, ev.currentTarget)
+    }
+    
+    link.addEventListener('click', (ev)=>{
+        ev.preventDefault();
+        console.log("link clicked")
+    })
+    
+    txt.addEventListener("input", (ev)=>{
+        console.log(ev.target, ev.target.value)
+    })
+    txt.addEventListener("change", (ev)=>{
+        console.log(ev.target, ev.target.value)
+    })
+    txt.addEventListener("blur", (ev)=>{
+        console.log(ev.target, ev.target.value)
+    })
+}
+
+
