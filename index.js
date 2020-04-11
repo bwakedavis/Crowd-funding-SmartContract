@@ -328,18 +328,45 @@ let numbers = [123,234, 456, 567]
 // let hypheneted = words.join("-")
 // console.log(hypheneted)
 
-//Chaining Array Methods
-let people = [
-    {id:123,name:"Davis",email:"davis@gmail.com"},
-    {id:456,name:"Dan",email:"dan@yahoo.com"},
-    {id:789,name:"Doly",email:"doly@gmail.com"},
-    {id:321,name:"marion",email:"marion@yahoo.com"},
-    {id:654,name:"Winnie",email:"weeny@yahoo.com"}
-]
+// //Chaining Array Methods
+// let people = [
+//     {id:123,name:"Davis",email:"davis@gmail.com"},
+//     {id:456,name:"Dan",email:"dan@yahoo.com"},
+//     {id:789,name:"Doly",email:"doly@gmail.com"},
+//     {id:321,name:"marion",email:"marion@yahoo.com"},
+//     {id:654,name:"Winnie",email:"weeny@yahoo.com"}
+// ]
 
-let yahoo = people.filter((person)=>{
-    return person.email.indexOf('@yahoo.com') > -1
-}).map((person)=>{
-    return person.name
-})
-console.log("list of yahoo user:", yahoo)
+// let yahoo = people.filter((person)=>{
+//     return person.email.indexOf('@yahoo.com') > -1
+// }).map((person)=>{
+//     return person.name
+// })
+// console.log("list of yahoo user:", yahoo)
+
+// //AJAX
+
+// let uri = "http://jsonplaceholder.typicode.com/users/7"
+
+// let xhr = new XMLHttpRequest();
+// xhr.open("GET",uri,true)
+// xhr.addEventListener("load",(response)=>{
+//     //handle the response from the server
+//     let data = response.responseText //or reponse XML
+//     let json = JSON.parse(data) //json object
+//     console.log(data)
+// })
+
+// xhr.addEventListener('error',(err)=>{
+//     console.log(err)
+// })
+// xhr.send(null)
+
+// //Fetch API - It returns a promise to test with node requires "node-fetch"
+// fetch(uri).then((response)=>{
+//     return response.json()
+// }).then((data)=>{
+//     console.log(data)
+// }).catch((err)=>{
+//     console.log(err)
+// })
