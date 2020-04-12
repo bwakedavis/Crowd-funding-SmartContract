@@ -539,28 +539,44 @@ let numbers = [123,234, 456, 567]
 //     })
 // }
 
-//Event Bubbling and Propagation
-//element.addEvemtListener(type,func,useCapture)
-let m = document.getElementById('m')
-let d = document.getElementById('d')
-let p = document.getElementById('p')
-let s = document.getElementById('s')
-let l = console.log
+// //Event Bubbling and Propagation
+// //element.addEvemtListener(type,func,useCapture)
+// let m = document.getElementById('m')
+// let d = document.getElementById('d')
+// let p = document.getElementById('p')
+// let s = document.getElementById('s')
+// let l = console.log
 
-let highlight = (ev)=>{
-    //add bg to gold
-    let target = ev.currentTarget
-    target.className = 'gold'
-}
-
-
-d.addEventListener('click', (ev)=>{
-    l("Hi am a div")
-})
-let elements = [m, d, p, s]
-elements.forEach((el)=>{
-    el.addEventListener('click',highlight)
-})
+// let highlight = (ev)=>{
+//     //add bg to gold
+//     let target = ev.currentTarget
+//     target.className = 'gold'
+// }
 
 
+// d.addEventListener('click', (ev)=>{
+//     l("Hi am a div")
+// })
+// let elements = [m, d, p, s]
+// elements.forEach((el)=>{
+//     el.addEventListener('click',highlight)
+// })
 
+// // Keyboard events - ev.char, ev.charCode, ev.which
+// let l = console.log
+// document.addEventListener('DOMContentLoaded', init)
+
+// function init(){
+//     let txt = document.getElementById('txt')
+//     txt.addEventListener('keydown', anyKey)
+// }
+
+// function anyKey(ev){
+//     // l(ev.type,ev.target)
+//     let target = ev.currentTarget
+//     let tag = target.tagName
+//     let char = ev.which
+//     l(target, tag, char)
+// }
+
+//Namespacing
