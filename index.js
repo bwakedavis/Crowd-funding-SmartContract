@@ -616,44 +616,68 @@ let numbers = [123,234, 456, 567]
 // // divA = document.getElementById('output')
 // // divA.addEventListener('mousemove',colorDiv)
 
-//Date object
-let d = new Date()
-let num = 1000 * 60 *60 * 24 * 365.25 * 40
-         // ms * sec * min * hr * days * years
+// //Date object
+// let d = new Date()
+// let num = 1000 * 60 *60 * 24 * 365.25 * 40
+//          // ms * sec * min * hr * days * years
 
-let str = '20 July 2012 14:05:00'
-let dl = new Date(1500000000000)
-//Unix Epoch Jan 1 00:00:00.000 1970
-console.log(dl)
+// let str = '20 July 2012 14:05:00'
+// let dl = new Date(1500000000000)
+// //Unix Epoch Jan 1 00:00:00.000 1970
+// console.log(dl)
 
-let d2 = new Date(num)
-console.log(d2)
+// let d2 = new Date(num)
+// console.log(d2)
 
-let d3 = new Date(str)
-console.log(d3)
+// let d3 = new Date(str)
+// console.log(d3)
 
-let d4 = new Date(2017, 0, 1, 12, 30 ,0 ,123)
-console.log(d4)
+// let d4 = new Date(2017, 0, 1, 12, 30 ,0 ,123)
+// console.log(d4)
 
-d.setFullYear(2020) //setHours(9), setMinutes(), setMonth(), setDate()
-console.log(d.setFullYear(2020))
+// d.setFullYear(2020) //setHours(9), setMinutes(), setMonth(), setDate()
+// console.log(d.setFullYear(2020))
 
-let t = d.getMinutes()
-console.log(t)
-let ds = d.getDay()
-console.log(ds)
-let dh = d.getHours()
-console.log(dh)
-let dt = d.getDate()
-console.log(dt)
+// let t = d.getMinutes()
+// console.log(t)
+// let ds = d.getDay()
+// console.log(ds)
+// let dh = d.getHours()
+// console.log(dh)
+// let dt = d.getDate()
+// console.log(dt)
 
-//OUTPUT
-/*
-    d.t0DateString() - date portion to UTC time
-    d.toTimeString() - date portion UTC time
-    d.toISOString() - date simplified UTC
-    d.toJSON() - date for use in json string - UTC
-    d.toLocaleString() - local time and date
-    d.toLocaleString('en-CA') - local time and date with specified formatting
-    d.toUTCString - UTC date string
-*/
+// //OUTPUT
+// /*
+//     d.t0DateString() - date portion to UTC time
+//     d.toTimeString() - date portion UTC time
+//     d.toISOString() - date simplified UTC
+//     d.toJSON() - date for use in json string - UTC
+//     d.toLocaleString() - local time and date
+//     d.toLocaleString('en-CA') - local time and date with specified formatting
+//     d.toUTCString - UTC date string
+// */
+
+//Truthy and Falsey
+//null, undefined, 0, false, '', "", NaN - Falsey
+
+let davy; //undefined
+let es = ""
+let z = 0
+let n = null
+let u = undefined
+let f = false
+
+let i = isNaN("hello")
+if(false){
+ console.log("true part")
+}else{
+    console.log("false part")
+}
+console.log(i)
+
+if(davy || es || z || n || u || f){
+    console.log("True part")
+   }else{
+       console.log("False part")
+   }
