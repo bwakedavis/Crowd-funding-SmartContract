@@ -726,3 +726,29 @@ let numbers = [123,234, 456, 567]
 //     console.log("took a long time")
 // }
 // console.log("end")
+
+//for ..of loop
+let supernatural = {
+    "actors":[
+        "Jared", "Jensen", "Mark", "Collins"
+    ],
+    "characters":[
+        "Sam", "Dean", "Crowley", "Castial"
+    ],
+    "seasons":12
+}
+
+for(prop in supernatural){
+    console.log(prop, supernatural[prop])
+}
+
+for(prop in supernatural.actors){
+    console.log(prop, supernatural.actors[prop])
+}
+
+for(prop in supernatural.actors){
+    console.log(prop)
+}
+for(prop of supernatural.actors){
+    console.log(prop)
+}
