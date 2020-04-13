@@ -727,28 +727,37 @@ let numbers = [123,234, 456, 567]
 // }
 // console.log("end")
 
-//for ..of loop
-let supernatural = {
-    "actors":[
-        "Jared", "Jensen", "Mark", "Collins"
-    ],
-    "characters":[
-        "Sam", "Dean", "Crowley", "Castial"
-    ],
-    "seasons":12
-}
+// //for ..of loop
+// let supernatural = {
+//     "actors":[
+//         "Jared", "Jensen", "Mark", "Collins"
+//     ],
+//     "characters":[
+//         "Sam", "Dean", "Crowley", "Castial"
+//     ],
+//     "seasons":12
+// }
 
-for(prop in supernatural){
-    console.log(prop, supernatural[prop])
-}
+// for(prop in supernatural){
+//     console.log(prop, supernatural[prop])
+// }
 
-for(prop in supernatural.actors){
-    console.log(prop, supernatural.actors[prop])
-}
+// for(prop in supernatural.actors){
+//     console.log(prop, supernatural.actors[prop])
+// }
 
-for(prop in supernatural.actors){
-    console.log(prop)
-}
-for(prop of supernatural.actors){
-    console.log(prop)
-}
+// for(prop in supernatural.actors){
+//     console.log(prop)
+// }
+// for(prop of supernatural.actors){
+//     console.log(prop)
+// }
+
+//Object.assign(target, sources...) method - used to Copy or Merge objects
+
+let obj1 = {"arms":true,"armCount":2}
+let obj2 = {"weapons":["missile launcher", "saw"]}
+let obj3 = {"canMove":true, "legs":8, "treads":8}
+
+let arms = Object.assign({"hasHands":true},obj1, obj2)
+console.log(arms)
