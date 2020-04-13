@@ -2,6 +2,8 @@
 // let name = "davis" //Datatype string
 // let id = 2345 //DataType number
 // let alive = true //DataType boolean
+
+
 // let xyz = null //nothing
 let fiveDs; //undefined
 // name = "bwake" //re-assigning
@@ -816,56 +818,72 @@ let numbers = [123,234, 456, 567]
 // let a = Number(true) //1
 // console.log(a)
 
-// Difference between == and ===, == copmares values, === compares objects
-let a, b, objc1, objc2, copy1, copy2, html1
-a = 5
-b = 5
-if(a == b){
-    console.log("a and b are equal")
-}else{
-    console.log("a and b are not equal")
-}
-if(a === b){
-    console.log("a and b are equal")
-}else{
-    console.log("a and b are not equal")
-}
+// // Difference between == and ===, == copmares values, === compares objects
+// let a, b, objc1, objc2, copy1, copy2, html1
+// a = 5
+// b = 5
+// if(a == b){
+//     console.log("a and b are equal")
+// }else{
+//     console.log("a and b are not equal")
+// }
+// if(a === b){
+//     console.log("a and b are equal")
+// }else{
+//     console.log("a and b are not equal")
+// }
 
-objc1 = {prop:"value"}
-objc2 = {prop:"value"}
-if(objc1  == objc2){
-    console.log("objc1 and objc2 are equal")
-}else{
-    console.log("objc1 and objc2 are not equal")
-}
-if(objc1  === objc2){
-    console.log("objc1 and objc2 are equal")
-}else{
-    console.log("objc1 and objc2 are not equal")
-}
+// objc1 = {prop:"value"}
+// objc2 = {prop:"value"}
+// if(objc1  == objc2){
+//     console.log("objc1 and objc2 are equal")
+// }else{
+//     console.log("objc1 and objc2 are not equal")
+// }
+// if(objc1  === objc2){
+//     console.log("objc1 and objc2 are equal")
+// }else{
+//     console.log("objc1 and objc2 are not equal")
+// }
 
-copy1 = objc1
-copy2 = objc1
-if(copy1  == copy2){
-    console.log("copy1 and copy2 are equal")
-}else{
-    console.log("copy1 and copy2 are not equal")
-}
-if(copy1  === copy2){
-    console.log("copy1 and copy2 are strictly equal")
-}else{
-    console.log("copy1 and copy2 are strictly not equal")
-}
+// copy1 = objc1
+// copy2 = objc1
+// if(copy1  == copy2){
+//     console.log("copy1 and copy2 are equal")
+// }else{
+//     console.log("copy1 and copy2 are not equal")
+// }
+// if(copy1  === copy2){
+//     console.log("copy1 and copy2 are strictly equal")
+// }else{
+//     console.log("copy1 and copy2 are strictly not equal")
+// }
 
-html1 = document.querySelector('h1')
-html2 = document.querySelector('h1')
-if(html1  == html2){
-    console.log("html1 and html2 are equal")
-}else{
-    console.log("html1 and html2 are not equal")
+// html1 = document.querySelector('h1')
+// html2 = document.querySelector('h1')
+// if(html1  == html2){
+//     console.log("html1 and html2 are equal")
+// }else{
+//     console.log("html1 and html2 are not equal")
+// }
+// if(html1  === html2){
+//     console.log("html1 and html2 are strictly equal")
+// }else{
+//     console.log("html1 and html2 are not strictly equal")
+// }
+
+//'new' keyword - creates new object, the object is prototyped linked, the object is set as "this" binding, if no return statement exists then a copy of the object is returned
+
+function Car(make, model){
+    // console.log(this)
+    this.props = {
+        make,
+        model
+    }
+    this.info = function(){
+        return this.props
+    }
 }
-if(html1  === html2){
-    console.log("html1 and html2 are strictly equal")
-}else{
-    console.log("html1 and html2 are not strictly equal")
-}
+let c1 = new Car('Honda', "Accord")
+let c2 = new Car('Tesla', "Model S")
+console.log(c1, c1.props, c2.info())
