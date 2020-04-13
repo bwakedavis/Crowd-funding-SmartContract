@@ -658,26 +658,55 @@ let numbers = [123,234, 456, 567]
 //     d.toUTCString - UTC date string
 // */
 
-//Truthy and Falsey
-//null, undefined, 0, false, '', "", NaN - Falsey
+// //Truthy and Falsey
+// //null, undefined, 0, false, '', "", NaN - Falsey
 
-let davy; //undefined
-let es = ""
-let z = 0
-let n = null
-let u = undefined
-let f = false
+// let davy; //undefined
+// let es = ""
+// let z = 0
+// let n = null
+// let u = undefined
+// let f = false
 
-let i = isNaN("hello")
-if(false){
- console.log("true part")
-}else{
-    console.log("false part")
+// let i = isNaN("hello")
+// if(false){
+//  console.log("true part")
+// }else{
+//     console.log("false part")
+// }
+// console.log(i)
+
+// if(davy || es || z || n || u || f){
+//     console.log("True part")
+//    }else{
+//        console.log("False part")
+//    }
+
+//Null an Undefined
+//NULL means nothing, void, emptiness, and is intentionally set
+// UNDEFINED means the container exists but has'nt been given a value yet ie.functions with no return statement returns undefined
+function abc(){
+    //nothing here
+    
 }
-console.log(i)
+console.log(abc)
+function abd(){
+    //nothing here
+    return null
+}
+console.log(abd())
+console.log(typeof null) //object
+console.log(typeof undefined) //undefined
 
-if(davy || es || z || n || u || f){
-    console.log("True part")
-   }else{
-       console.log("False part")
-   }
+console.log(null === undefined) //false
+console.log(null == undefined) //true
+
+console.log(null == null) //true
+console.log(null === null) //true
+
+console.log(undefined == undefined) //true
+console.log(undefined === undefined) //true
+
+console.log(!null) //true
+console.log(isNaN(1 + null)) //false
+console.log(isNaN(1 + undefined)) //true
