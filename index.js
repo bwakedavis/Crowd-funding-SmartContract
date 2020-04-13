@@ -872,18 +872,44 @@ let numbers = [123,234, 456, 567]
 //     console.log("html1 and html2 are not strictly equal")
 // }
 
-//'new' keyword - creates new object, the object is prototyped linked, the object is set as "this" binding, if no return statement exists then a copy of the object is returned
+// //'new' keyword - creates new object, the object is prototyped linked, the object is set as "this" binding, if no return statement exists then a copy of the object is returned
 
-function Car(make, model){
-    // console.log(this)
-    this.props = {
-        make,
-        model
-    }
-    this.info = function(){
-        return this.props
-    }
+// function Car(make, model){
+//     // console.log(this)
+//     this.props = {
+//         make,
+//         model
+//     }
+//     this.info = function(){
+//         return this.props
+//     }
+// }
+// let c1 = new Car('Honda', "Accord")
+// let c2 = new Car('Tesla', "Model S")
+// console.log(c1, c1.props, c2.info())
+
+//Object.create(prototype,propertiesObject/Object.defineProperties) method
+let objct = {
+    name:"thee ninjaaah"
 }
-let c1 = new Car('Honda', "Accord")
-let c2 = new Car('Tesla', "Model S")
-console.log(c1, c1.props, c2.info())
+
+let objct2 = Object.create(objct, {})
+console.log(objct2)
+console.log(objct2.name)
+
+let objct3 = Object.create(objct2, {
+    fullName:{
+        configurable:true,
+        writable:true,
+        enumerable:true,
+        value:true
+    },
+    canBowl:{
+        configurable:true,
+        writable:true,
+        enumerable:true,
+        value:true
+    }
+})
+
+console.log(objct3, objct3.name)
