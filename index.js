@@ -682,31 +682,47 @@ let numbers = [123,234, 456, 567]
 //        console.log("False part")
 //    }
 
-//Null an Undefined
-//NULL means nothing, void, emptiness, and is intentionally set
-// UNDEFINED means the container exists but has'nt been given a value yet ie.functions with no return statement returns undefined
-function abc(){
-    //nothing here
+// //Null an Undefined
+// //NULL means nothing, void, emptiness, and is intentionally set
+// // UNDEFINED means the container exists but has'nt been given a value yet ie.functions with no return statement returns undefined
+// function abc(){
+//     //nothing here
     
-}
-console.log(abc)
-function abd(){
-    //nothing here
-    return null
-}
-console.log(abd())
-console.log(typeof null) //object
-console.log(typeof undefined) //undefined
+// }
+// console.log(abc)
+// function abd(){
+//     //nothing here
+//     return null
+// }
+// console.log(abd())
+// console.log(typeof null) //object
+// console.log(typeof undefined) //undefined
 
-console.log(null === undefined) //false
-console.log(null == undefined) //true
+// console.log(null === undefined) //false
+// console.log(null == undefined) //true
 
-console.log(null == null) //true
-console.log(null === null) //true
+// console.log(null == null) //true
+// console.log(null === null) //true
 
-console.log(undefined == undefined) //true
-console.log(undefined === undefined) //true
+// console.log(undefined == undefined) //true
+// console.log(undefined === undefined) //true
 
-console.log(!null) //true
-console.log(isNaN(1 + null)) //false
-console.log(isNaN(1 + undefined)) //true
+// console.log(!null) //true
+// console.log(isNaN(1 + null)) //false
+// console.log(isNaN(1 + undefined)) //true
+
+// //Throwing Errors and exceptions ad using try...catch to handle thrown errors and exceptions
+// // EvalError, InternalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError
+// // throw "Javelin" //stops the program
+// // console.log("hello")
+// try{
+//     // throw true
+//     throw {name:"Davis", message:"cool"}
+//     // fetch("http://jsonplaceholder.typecode.com").then((response)=>{})
+//     console.log("hello")
+// }catch(err){
+//     console.log("Caught", err.name, err.message)
+// }finally{
+//     console.log("took a long time")
+// }
+// console.log("end")
