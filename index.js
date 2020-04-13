@@ -539,28 +539,34 @@ let numbers = [123,234, 456, 567]
 //     })
 // }
 
-// //Event Bubbling and Propagation
-// //element.addEvemtListener(type,func,useCapture)
-// let m = document.getElementById('m')
-// let d = document.getElementById('d')
-// let p = document.getElementById('p')
-// let s = document.getElementById('s')
-// let l = console.log
+//Event Bubbling and Propagation
+//element.addEvemtListener(type,func,useCapture)
+let m = document.getElementById('m')
+let d = document.getElementById('d')
+let p = document.getElementById('p')
+let s = document.getElementById('s')
+let l = console.log
 
-// let highlight = (ev)=>{
-//     //add bg to gold
-//     let target = ev.currentTarget
-//     target.className = 'gold'
-// }
+let highlight = (ev)=>{
+    //add bg to gold
+    let target = ev.currentTarget
+    target.className = 'gold'
+    reset(target)
+}
+let reset = (el)=>{
+    setTimeout(()=>{
+        el.className = ""
+    },2000)
+}
 
-
-// d.addEventListener('click', (ev)=>{
-//     l("Hi am a div")
-// })
-// let elements = [m, d, p, s]
-// elements.forEach((el)=>{
-//     el.addEventListener('click',highlight)
-// })
+d.addEventListener('click', (ev)=>{
+    ev.stopImmediatePropagation()
+    l("Hi am a div")
+})
+let elements = [m, d, p, s]
+elements.forEach((el)=>{
+    el.addEventListener('click',highlight)
+})
 
 // // Keyboard events - ev.char, ev.charCode, ev.which
 // let l = console.log
@@ -579,4 +585,19 @@ let numbers = [123,234, 456, 567]
 //     l(target, tag, char)
 // }
 
-//Namespacing
+//Namespacing 1
+let colourDiv,
+
+ divA 
+colourDiv 
+
+= function(ev){
+    let target = ev.currentTarget
+    target.style.backgroundColor = 'purple'
+    
+}
+
+divA = document.getElementById('output')
+divA.addEventListener('mousemove',colourDiv)
+
+// 34.70.183.127
