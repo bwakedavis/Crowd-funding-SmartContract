@@ -753,11 +753,44 @@ let numbers = [123,234, 456, 567]
 //     console.log(prop)
 // }
 
-//Object.assign(target, sources...) method - used to Copy or Merge objects
+// //Object.assign(target, sources...) method - used to Copy or Merge objects
 
-let obj1 = {"arms":true,"armCount":2}
-let obj2 = {"weapons":["missile launcher", "saw"]}
-let obj3 = {"canMove":true, "legs":8, "treads":8}
+// let obj1 = {"arms":true,"armCount":2}
+// let obj2 = {"weapons":["missile launcher", "saw"]}
+// let obj3 = {"canMove":true, "legs":8, "treads":8}
 
-let arms = Object.assign({"hasHands":true},obj1, obj2)
-console.log(arms)
+// let arms = Object.assign({"hasHands":true},obj1, obj2)
+// console.log(arms)
+
+//Tips for Debbuging JS
+let DEBUG_MODE = false
+if(DEBUG_MODE){
+    debugger
+}
+let D = "Davis"
+let B = "Bwake"
+console.count(D)
+
+function x(nm){
+    console.count(nm)
+    return true
+}
+console.count(B)
+x(D)
+
+console.log(D)
+x(B)
+
+console.count(D)
+
+console.time(B)
+console.group()
+    console.log("log")
+        console.group()
+        console.info("info")
+        console.groupEnd()
+    // console.error("error")
+console.groupEnd()
+console.timeEnd(B)
+
+console.count
