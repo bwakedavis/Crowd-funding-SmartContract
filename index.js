@@ -795,23 +795,77 @@ let numbers = [123,234, 456, 567]
 
 // console.count
 
-//NaN and isNaN
-//NaN is a property of the global object - it respresente a value which is not a number
-//It will be unequl to !== to anything inside if()
-//isNaN() first converts the value to a number, next the coerced value is tested for NaN
+// //NaN and isNaN
+// //NaN is a property of the global object - it respresente a value which is not a number
+// //It will be unequl to !== to anything inside if()
+// //isNaN() first converts the value to a number, next the coerced value is tested for NaN
 
-let t = isNaN(true) //false
-let f = isNaN(false) //false
-let n = isNaN(null) //false
-let u = isNaN(undefined) //true
-let b = isNaN(23) //false
-let c = isNaN('23') //false
-let d = isNaN('45.45') //false
-let e = isNaN(new Date())  //false
-let g = isNaN('') //false
-let h = isNaN("  ")  //false
-let i = isNaN("28 August 2018") //true
-console.log(t, f, n, u, b, c, d, e, g, i)
+// let t = isNaN(true) //false
+// let f = isNaN(false) //false
+// let n = isNaN(null) //false
+// let u = isNaN(undefined) //true
+// let b = isNaN(23) //false
+// let c = isNaN('23') //false
+// let d = isNaN('45.45') //false
+// let e = isNaN(new Date())  //false
+// let g = isNaN('') //false
+// let h = isNaN("  ")  //false
+// let i = isNaN("28 August 2018") //true
+// console.log(t, f, n, u, b, c, d, e, g, i)
 
-let a = Number(true) //1
-console.log(a)
+// let a = Number(true) //1
+// console.log(a)
+
+// Difference between == and ===, == copmares values, === compares objects
+let a, b, objc1, objc2, copy1, copy2, html1
+a = 5
+b = 5
+if(a == b){
+    console.log("a and b are equal")
+}else{
+    console.log("a and b are not equal")
+}
+if(a === b){
+    console.log("a and b are equal")
+}else{
+    console.log("a and b are not equal")
+}
+
+objc1 = {prop:"value"}
+objc2 = {prop:"value"}
+if(objc1  == objc2){
+    console.log("objc1 and objc2 are equal")
+}else{
+    console.log("objc1 and objc2 are not equal")
+}
+if(objc1  === objc2){
+    console.log("objc1 and objc2 are equal")
+}else{
+    console.log("objc1 and objc2 are not equal")
+}
+
+copy1 = objc1
+copy2 = objc1
+if(copy1  == copy2){
+    console.log("copy1 and copy2 are equal")
+}else{
+    console.log("copy1 and copy2 are not equal")
+}
+if(copy1  === copy2){
+    console.log("copy1 and copy2 are strictly equal")
+}else{
+    console.log("copy1 and copy2 are strictly not equal")
+}
+
+html1 = document.querySelector('h1')
+html2 = document.querySelector('h1')
+if(html1  == html2){
+    console.log("html1 and html2 are equal")
+}else{
+    console.log("html1 and html2 are not equal")
+}
+if(html1  === html2){
+    console.log("html1 and html2 are strictly equal")
+}else{
+    console.log("html1 and html2 are not strictly equal")
+}
