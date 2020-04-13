@@ -568,37 +568,52 @@ let numbers = [123,234, 456, 567]
 //     el.addEventListener('click',highlight)
 // })
 
-// Keyboard events - ev.char, ev.charCode, ev.which
-let l = console.log
-document.addEventListener('DOMContentLoaded', init)
+// // Keyboard events - ev.char, ev.charCode, ev.which
+// let l = console.log
+// document.addEventListener('DOMContentLoaded', init)
 
-function init(){
-    let txt = document.getElementById('txt')
-    txt.addEventListener('keydown', anyKey)
-}
+// function init(){
+//     let txt = document.getElementById('txt')
+//     txt.addEventListener('keydown', anyKey)
+// }
 
-function anyKey(ev){
-    // l(ev.type,ev.target)
-    let target = ev.currentTarget
-    let tag = target.tagName
-    let char = ev.which || ev.charCode || ev.char
-    let s = String.fromCharCode(char)
-    l(target, tag, char, s)
-}
+// function anyKey(ev){
+//     // l(ev.type,ev.target)
+//     let target = ev.currentTarget
+//     let tag = target.tagName
+//     let char = ev.which || ev.charCode || ev.char
+//     let s = String.fromCharCode(char)
+//     l(target, tag, char, s)
+// }
 
 //Namespacing 1
-let colourDiv,
 
- divA 
-colourDiv 
-
-= function(ev){
-    let target = ev.currentTarget
-    target.style.backgroundColor = 'purple'
+let davis = {
     
+        colorDiv:(ev)=>{
+            let target = ev.currentTarget
+            target.style.backgroundColor = 'purple'
+            target.style.color = '#fff'
+            
+        },
+        init: ()=>{
+            divA = document.getElementById('output')
+                divA.addEventListener('mousemove',davis.colorDiv)
+                
+        }
 }
+davis.init()
+// let colorDiv,
 
-divA = document.getElementById('output')
-divA.addEventListener('mousemove',colourDiv)
+//  divA 
+// colorDiv = (ev)=>{
+//     let target = ev.currentTarget
+//     target.style.backgroundColor = 'purple'
+//     target.style.color = '#fff'
+    
+// }
+
+// divA = document.getElementById('output')
+// divA.addEventListener('mousemove',colorDiv)
 
 // 34.70.183.127
