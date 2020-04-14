@@ -888,28 +888,62 @@ let numbers = [123,234, 456, 567]
 // let c2 = new Car('Tesla', "Model S")
 // console.log(c1, c1.props, c2.info())
 
-//Object.create(prototype,propertiesObject/Object.defineProperties) method
-let objct = {
-    name:"thee ninjaaah"
+// //Object.create(prototype,propertiesObject/Object.defineProperties) method
+// let objct = {
+//     name:"thee ninjaaah"
+// }
+
+// let objct2 = Object.create(objct, {})
+// console.log(objct2)
+// console.log(objct2.name)
+
+// let objct3 = Object.create(objct2, {
+//     fullName:{
+//         configurable:true,
+//         writable:true,
+//         enumerable:true,
+//         value:true
+//     },
+//     canBowl:{
+//         configurable:true,
+//         writable:true,
+//         enumerable:true,
+//         value:true
+//     }
+// })
+
+// console.log(objct3, objct3.name)
+
+//""this"" keyword
+"use strict"
+let box = document.querySelector('.box')
+let myFunc = function(){
+    console.log("log1", this)
+    setTimeout(()=>{
+        console.log('log3',"timed out", this)
+    },250)
 }
+let myFunc2 = ()=>{ // points to the global object
+    console.log("log2", this)
+    setTimeout(()=>{
+        console.log('log3',"timed out", this)
+    },250)
+}
+box.addEventListener('mousedown', myFunc)
+box.addEventListener('mouseup', myFunc2)
 
-let objct2 = Object.create(objct, {})
-console.log(objct2)
-console.log(objct2.name)
+// myFunc()
+// myFunc.call()
+// myFunc.call(window)
+// myFunc.call(box)
+myFunc.apply()
+myFunc.apply(window)
+myFunc.apply(box)
 
-let objct3 = Object.create(objct2, {
-    fullName:{
-        configurable:true,
-        writable:true,
-        enumerable:true,
-        value:true
-    },
-    canBowl:{
-        configurable:true,
-        writable:true,
-        enumerable:true,
-        value:true
-    }
-})
-
-console.log(objct3, objct3.name)
+// myFunc2()
+// myFunc2.call()
+// myFunc2.call(window)
+// myFunc2.call(box)
+myFunc2.apply()
+myFunc2.apply(window)
+myFunc2.apply(box)

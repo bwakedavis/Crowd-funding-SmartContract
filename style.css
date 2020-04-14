@@ -1,27 +1,29 @@
 #m,#d,#p,#s{
     border: 3px solid red;
-    padding: 20px;
+    padding: 2rem;
+    margin: 1rem;
 }
 #m{
-    width: 500px;
-    height: 500px;
+    
     background: rgb(12, 12, 12);
 }
 #d{
-    width: 400px;
-    height: 400px;
+    
     background: rgb(43, 41, 41);
 }
 #p{
-    width: 300px;
-    height: 300px;
+    
     background: rgb(160, 152, 152);
 }
 #s{
-    width: 200px;
-    height: 200px;
+    
     background: rgb(252, 250, 250);
 }
 .gold{
     background: gold;
+}
+.box{
+    border: 1px solid #666;
+    padding: 1rem;
+    margin: 1rem;
 }
