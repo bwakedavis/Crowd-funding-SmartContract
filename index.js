@@ -970,18 +970,3 @@ bob.call(bill, 2, "goodbye")
 bob.apply(bill,[3, "hi"])
 bill.myMethod(bob, 4, "ciao")
 
-// // user
-// // WL3APMWBtNW3
-// gcp
-// // us-central - 10.128.0.0/20
-// // europe-west2 - 10.132.0.0/20
-// // 105.160.106.16
-
-// // b?mD}NomLY=W8X; - windows server
-
-// // b?mD}NomLY=W8X;
-// // /DBX?hIqQQR5>m0
-
-// // }rV0iDBPLvKp=4v
-// // 35.223.204.22
-// // IV7CBCgu8gmcxfx71T4B+i/Ol5VEy9nWcSYran1vjHg=
