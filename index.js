@@ -914,36 +914,74 @@ let numbers = [123,234, 456, 567]
 
 // console.log(objct3, objct3.name)
 
-//""this"" keyword
-"use strict"
-let box = document.querySelector('.box')
-let myFunc = function(){
-    console.log("log1", this)
-    setTimeout(()=>{
-        console.log('log3',"timed out", this)
-    },250)
-}
-let myFunc2 = ()=>{ // points to the global object
-    console.log("log2", this)
-    setTimeout(()=>{
-        console.log('log3',"timed out", this)
-    },250)
-}
-box.addEventListener('mousedown', myFunc)
-box.addEventListener('mouseup', myFunc2)
+// //""this"" keyword, without strict mode this will default to the window object
+// "use strict"
+// let box = document.querySelector('.box')
+// let myFunc = function(){
+//     console.log("log1", this)
+//     setTimeout(()=>{
+//         console.log('log3',"timed out", this)
+//     },250)
+// }
+// let myFunc2 = ()=>{ // points to the global object
+//     console.log("log2", this)
+//     setTimeout(()=>{
+//         console.log('log3',"timed out", this)
+//     },250)
+// }
+// box.addEventListener('mousedown', myFunc)
+// box.addEventListener('mouseup', myFunc2)
 
-// myFunc()
-// myFunc.call()
-// myFunc.call(window)
-// myFunc.call(box)
-myFunc.apply()
-myFunc.apply(window)
-myFunc.apply(box)
+// // myFunc()
+// // myFunc.call()
+// // myFunc.call(window)
+// // myFunc.call(box)
+// myFunc.apply()
+// myFunc.apply(window)
+// myFunc.apply(box)
 
-// myFunc2()
-// myFunc2.call()
-// myFunc2.call(window)
-// myFunc2.call(box)
-myFunc2.apply()
-myFunc2.apply(window)
-myFunc2.apply(box)
+// // myFunc2()
+// // myFunc2.call()
+// // myFunc2.call(window)
+// // myFunc2.call(box)
+// myFunc2.apply()
+// myFunc2.apply(window)
+// myFunc2.apply(box)
+
+//Difference between call(), apply() and bind()
+
+let bob = function(num,str){
+    console.log('bob', num, str, this)
+    return true
+}
+
+let bill = {
+    name:"Bill Murray",
+    movie: "Lost in Translation",
+    myMethod:function(fn){
+        // fn(2,"hello")
+        fn.apply(bill)
+    }
+}
+
+// bob(1, "hello")
+// bill.myMethod(bob)
+bob.call(bill, 2, "goodbye")
+bob.apply(bill,[3, "hi"])
+bill.myMethod(bob, 4, "ciao")
+
+// // user
+// // WL3APMWBtNW3
+// gcp
+// // us-central - 10.128.0.0/20
+// // europe-west2 - 10.132.0.0/20
+// // 105.160.106.16
+
+// // b?mD}NomLY=W8X; - windows server
+
+// // b?mD}NomLY=W8X;
+// // /DBX?hIqQQR5>m0
+
+// // }rV0iDBPLvKp=4v
+// // 35.223.204.22
+// // IV7CBCgu8gmcxfx71T4B+i/Ol5VEy9nWcSYran1vjHg=
