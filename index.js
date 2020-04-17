@@ -968,5 +968,5 @@ let bill = {
 // bill.myMethod(bob)
 bob.call(bill, 2, "goodbye") //.call
 bob.apply(bill,[3, "hi"]) //.apply
-bill.bind(bob, 4, "ciao")  //bind
+bill.myMethod(bob, 4, "ciao")  
 
