@@ -960,13 +960,18 @@ let bill = {
     movie: "Lost in Translation",
     myMethod:function(fn){
         // fn(2,"hello")
-        fn.apply(bill)
+        let n = arguments[1]
+        let s = arguments[2]
+        fn.apply(bill, [n, s])
     }
 }
 
 // bob(1, "hello")
 // bill.myMethod(bob)
 bob.call(bill, 2, "goodbye") //.call
+let arr = [3, 'hi']
 bob.apply(bill,[3, "hi"]) //.apply
 bill.myMethod(bob, 4, "ciao")  
+let fred = bob.bind(bill, 5, "hasta")
+fred()
 
