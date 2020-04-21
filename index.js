@@ -948,30 +948,54 @@ let numbers = [123,234, 456, 567]
 // myFunc2.apply(window)
 // myFunc2.apply(box)
 
-//Difference between call(), apply() and bind()
+// //Difference between call(), apply() and bind()
 
-let bob = function(num,str){
-    console.log('bob', num, str, this)
-    return true
-}
+// let bob = function(num,str){
+//     console.log('bob', num, str, this)
+//     return true
+// }
 
-let bill = {
-    name:"Bill Murray",
-    movie: "Lost in Translation",
-    myMethod:function(fn){
-        // fn(2,"hello")
-        let n = arguments[1]
-        let s = arguments[2]
-        fn.apply(bill, [n, s])
-    }
-}
+// let bill = {
+//     name:"Bill Murray",
+//     movie: "Lost in Translation",
+//     myMethod:function(fn){
+//         // fn(2,"hello")
+//         let n = arguments[1]
+//         let s = arguments[2]
+//         fn.apply(bill, [n, s])
+//     }
+// }
 
-// bob(1, "hello")
-// bill.myMethod(bob)
-bob.call(bill, 2, "goodbye") //.call
-let arr = [3, 'hi']
-bob.apply(bill,[3, "hi"]) //.apply
-bill.myMethod(bob, 4, "ciao")  
-let fred = bob.bind(bill, 5, "hasta")
-fred()
+// // bob(1, "hello")
+// // bill.myMethod(bob)
+// bob.call(bill, 2, "goodbye") //.call
+// let arr = [3, 'hi']
+// bob.apply(bill,[3, "hi"]) //.apply
+// bill.myMethod(bob, 4, "ciao")  
+// let fred = bob.bind(bill, 5, "hasta")
+// fred()
 
+// //Delete keyworld - removes propeties from objects
+// let obj4 = {
+//     prop1:42,
+//     prop2:"Meaning of Life",
+//     prop3:function(){
+
+//     }
+// }
+
+// console.log(obj4.prop1, obj4.prop2, obj4.prop3, obj4.prop4)
+// obj4.prop1 = null
+// obj4.prop2 = undefined
+// delete obj4.prop3
+// console.log(obj4.prop1, obj4.prop2, obj4.prop3, obj4.prop4)
+// for(let p in obj4){
+//     console.log(p)
+// }
+
+// //void operator
+// void ( console.log("sample void") )
+// function x() {
+//     let a = 1
+// }
+// let abc = x()
