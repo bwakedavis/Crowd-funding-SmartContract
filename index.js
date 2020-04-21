@@ -1009,25 +1009,65 @@ let numbers = [123,234, 456, 567]
 //     }
 // }
 
-// obj5.prop1 = 1980
-let x = 7
-let obj5 = {
-    _prop1: 1970,
-    get prop1(){
-        return this._prop1 * 2
-    },
-    set prop1(val){
-        this._prop1 = val
-    },
-    prop2: "Alien",
-    x,
-    prop3(){
-        console.log("prop3 called")
-    }
-}
+// // obj5.prop1 = 1980
+// let x = 7
+// let obj5 = {
+//     _prop1: 1970,
+//     get prop1(){
+//         return this._prop1 * 2
+//     },
+//     set prop1(val){
+//         this._prop1 = val
+//     },
+//     prop2: "Alien",
+//     x,
+//     prop3(){
+//         console.log("prop3 called")
+//     }
+// }
 
-obj5.prop3()
-console.log(obj5.x)
-console.log(obj5.prop1)
-obj5.prop1 = 1980
-console.log(obj5.prop1)
+// obj5.prop3()
+// console.log(obj5.x)
+// console.log(obj5.prop1)
+// obj5.prop1 = 1980
+// console.log(obj5.prop1)
+
+/* Objects can be 
+ 1.Extensible - new poperties added
+ 2.Frozen - props cannot  be changed in any way
+ 3.Sealed - props cant be deleted or configured but are still writable
+
+ Object PROPERTIES can be
+  1.writable - change the value
+  2.Enumerable - seen through a for ..in loop
+  3.Configurable - change the property descriptors 
+
+  Object.isExtensible()
+  Object.isFrozen()
+  Object.isSealed()
+  Object.preventExtensions(obj)
+  Object.freeze()
+  Object.seal()
+
+  Descriptor Groups
+  DATA         ACCESSOR
+  value         get
+  writable      set
+  configurable  configurable
+  enumerable    enumerable
+  */
+
+  let obj6 = {
+      name:"Davis",
+      age:20
+  }
+  Object.defineProperty(obj6,'test',{
+      value:'Shaka',
+      configurable:true,
+      enumerable:false
+  })
+  for(let prop in obj6){
+      console.log(prop)
+  }
+  console.log(obj6, obj6.test)
+  
