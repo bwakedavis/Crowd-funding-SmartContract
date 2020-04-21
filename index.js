@@ -999,3 +999,35 @@ let numbers = [123,234, 456, 567]
 //     let a = 1
 // }
 // let abc = x()
+
+//Custom Object Methods, Getters and Setters
+// let obj5 = {
+//     prop1: 1970,
+//     prop2: "Alien",
+//     prop3:function(){
+
+//     }
+// }
+
+// obj5.prop1 = 1980
+let x = 7
+let obj5 = {
+    _prop1: 1970,
+    get prop1(){
+        return this._prop1 * 2
+    },
+    set prop1(val){
+        this._prop1 = val
+    },
+    prop2: "Alien",
+    x,
+    prop3(){
+        console.log("prop3 called")
+    }
+}
+
+obj5.prop3()
+console.log(obj5.x)
+console.log(obj5.prop1)
+obj5.prop1 = 1980
+console.log(obj5.prop1)
