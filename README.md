@@ -131,7 +131,7 @@ Arrays are used to store multiple values in a single variable
     hello('Davis')
 ```
 
-### if ... if else statements
+### if ... else if statements
 
 ```javascript
     if(age ==20){
