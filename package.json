@@ -1,0 +1,26 @@
+{
+  "name": "crowd-funding-smartcontract",
+  "version": "1.0.0",
+  "description": "crowd funding smart contract",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwakedavis/Crowd-funding-SmartContract.git"
+  },
+  "author": "Davis Bwake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwakedavis/Crowd-funding-SmartContract/issues"
+  },
+  "homepage": "https://github.com/bwakedavis/Crowd-funding-SmartContract#readme",
+  "dependencies": {
+    "fs-extra": "^9.1.0",
+    "ganache-cli": "^6.12.2",
+    "mocha": "^8.2.1",
+    "solc": "^0.8.1",
+    "web3": "^1.0.0-beta.26"
+  }
+}
